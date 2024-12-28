@@ -44,6 +44,8 @@ In the context of algorithm interviews, heaps and priority queues can be treated
 | Delete              | `O(log(n))` |
 | Heapify<sup>†</sup> | `O(n)`      |
 
+<sup>†</sup>: Creates a heap out of a given array of elements.
+
 ## Techniques
 
 ### Mention of `K`

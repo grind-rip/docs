@@ -5,7 +5,7 @@ A **heap** is a binary tree in which each element has a key (or sometimes priori
 * **Min heap**: In a min heap, the value of an element is the smallest for the element values of its subtree. The same property is true for all elements in the subtree.
 * **Max heap**: In a max heap, the value of an element is the greatest for the element values of its subtree. The same property is true for all elements in the subtree.
 
-Heaps are stored in arrays, with an implicit pointer structure determined by array indices. For zero-based arrays as in C, the rule is that a node at position `i` has children at positions `2*i+1` and `2*i+2`; in the other direction, a node at position `i` has a parent at position `(i-1)/2` (which rounds down in C). This is equivalent to storing a heap in an array by reading through the tree in breadth-first search order:
+It is possible to implement a heap as a linked list, where each element points to its parent and children, however, in practice, heaps are stored in arrays, with an implicit pointer structure determined by array indices. For zero-based arrays as in C, the rule is that a node at position `i` has children at positions `2*i+1` and `2*i+2`; in the other direction, a node at position `i` has a parent at position `(i-1)/2` (which rounds down in C). This is equivalent to storing a heap in an array by reading through the tree in breadth-first search order:
 
 ```
     0
@@ -25,7 +25,7 @@ If we are presented with an unsorted array, we can turn it into a heap more quic
 
 ## Priority Queue
 
-In a standard queue, elements leave the queue in the same order as they arrive. In a priority queue, elements leave the queue in order of decreasing priority: the `DEQUEUE` operation of a queue becomes a `DELETE-MIN` operation (or `DELETE-MAX`) of a priority queue, which removes and returns the highest-priority element regardless of when it was inserted. Priority queues are often used in operating system schedulers to determine which job to run next: a high-priority job runs before a low-priority job even if the low-priority job has been waiting longer.
+In a standard queue, elements leave the queue in the same order as they arrive (first in, first out). In a priority queue, elements leave the queue in order of decreasing priority: the `DEQUEUE` operation of a queue becomes a `DELETE-MIN` operation (or `DELETE-MAX`) of a priority queue, which removes and returns the highest-priority element regardless of when it was inserted. Priority queues are often used in operating system schedulers to determine which job to run next: a high-priority job runs before a low-priority job even if the low-priority job has been waiting longer.
 
 In the context of algorithm interviews, heaps and priority queues can be treated as the same data structure. A heap is a useful data structure when it is necessary to repeatedly remove the object with the highest (or lowest) priority, or when insertions need to be interspersed with removals of the root node.
 
@@ -44,7 +44,7 @@ In the context of algorithm interviews, heaps and priority queues can be treated
 | Delete              | `O(log(n))` |
 | Heapify<sup>†</sup> | `O(n)`      |
 
-<sup>†</sup>: Creates a heap out of a given array of elements.
+<sup>†</sup>: Creates a heap out of a given array of elements. **NOTE**: A heap is **not** a sorted array, however, the heapsort algorithm can be used to sort an array that satisfies the heap property.
 
 ## Techniques
 

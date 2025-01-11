@@ -7,6 +7,8 @@ A **heap** is a binary tree in which each element has a key (or sometimes priori
 
 It is possible to implement a heap as a linked list, where each element points to its parent and children, however, in practice, heaps are stored in arrays, with an implicit pointer structure determined by array indices. For zero-based arrays as in C, the rule is that a node at position `i` has children at positions `2*i+1` and `2*i+2`; in the other direction, a node at position `i` has a parent at position `(i-1)/2` (which rounds down in C). This is equivalent to storing a heap in an array by reading through the tree in breadth-first search order:
 
+NOTE: A perfect binary tree, a binary tree in which all interior nodes have two children and all leaves have the same depth or same level (the level of a node defined as the number of edges or links from the root node to a node) has a depth of `log₂(n+1)-1`, where `n` is the number of nodes.
+
 ```
     0
    / \
@@ -21,7 +23,7 @@ becomes
 0 1 2 3 4 5 6
 ```
 
-If we are presented with an unsorted array, we can turn it into a heap more quickly than the `O(nlog n)` time required to do `n` `INSERT`s. The trick is to build the heap from the bottom up. This means starting with position `n − 1` and working back to position 0, so that when it comes time to fix the heap invariant at position `i`, we have already fixed it at all later positions. Bottom-up heapification is used in the Heapsort algorithm, which first does bottom-up heapification in `O(n)` time and then repeatedly calls `DELETE-MAX` to extract the largest remaining element.
+If we are presented with an unsorted array, we can turn it into a heap more quickly than the `O(nlog n)` time required to do `n` `INSERT`s. The trick is to build the heap from the bottom up. This means starting with position `n − 1` and working back to position 0, so that when it comes time to fix the heap invariant at position `i`, we have already fixed it at all later positions. Bottom-up heapification is used in the Heapsort algorithm, which first does bottom-up heapification in `O(n)` time and then repeatedly calls `DELETE-MAX` to extract the largest remaining element.
 
 ## Priority Queue
 

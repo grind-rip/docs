@@ -23,7 +23,7 @@ becomes
 0 1 2 3 4 5 6
 ```
 
-If we are presented with an unsorted array, we can turn it into a heap more quickly than the `O(nlog n)` time required to do `n` `INSERT`s. The trick is to build the heap from the bottom up. This means starting with position `n − 1` and working back to position 0, so that when it comes time to fix the heap invariant at position `i`, we have already fixed it at all later positions. Bottom-up heapification is used in the Heapsort algorithm, which first does bottom-up heapification in `O(n)` time and then repeatedly calls `DELETE-MAX` to extract the largest remaining element.
+If we are presented with an unsorted array, we can turn it into a heap more quickly than the O(nlog n) time required to do `n` `INSERT`s. The trick is to build the heap from the bottom up. This means starting with position `n − 1` and working back to position 0, so that when it comes time to fix the heap invariant at position `i`, we have already fixed it at all later positions. Bottom-up heapification is used in the Heapsort algorithm, which first does bottom-up heapification in O(n) time and then repeatedly calls `DELETE-MAX` to extract the largest remaining element.
 
 ## Priority Queue
 
@@ -37,14 +37,14 @@ In the context of algorithm interviews, heaps and priority queues can be treated
 | -------- | ----------------------------------------------------- |
 | Python   | [`heapq`](https://docs.python.org/library/heapq.html) |
 
-## Time complexity
+## Time Complexity
 
-| Operation           | Big O       |
-| ------------------- | ----------- |
-| Find Max/Min        | `O(1)`      |
-| Insert              | `O(log(n))` |
-| Delete              | `O(log(n))` |
-| Heapify<sup>†</sup> | `O(n)`      |
+| Operation           | Big O     |
+| ------------------- | --------- |
+| Find Max/Min        | O(1)      |
+| Insert              | O(log(n)) |
+| Delete              | O(log(n)) |
+| Heapify<sup>†</sup> | O(n)      |
 
 <sup>†</sup>: Creates a heap out of a given array of elements. **NOTE**: A heap is **not** a sorted array, however, the heapsort algorithm can be used to sort an array that satisfies the heap property.
 

@@ -50,11 +50,17 @@ In the context of algorithm interviews, heaps and priority queues can be treated
 
 ## Techniques
 
-### Mention of `K`
+### Mention of K
 
 If you see *Kth Largest* or *K Closest* being mentioned in the question, it is usually a signal that a heap can be used to solve the problem, such as in [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/).
 
 If you require the top *K* elements use a min heap of size *K*. Iterate through each element, pushing it onto the heap. Whenever the heap size exceeds *K*, remove the minimum element. This will guarantee that you have the *Kth* largest elements in the heap.
+
+### Top K Frequent Elements
+
+### Two Heaps
+
+### k-way Merge
 
 ## Resources
 

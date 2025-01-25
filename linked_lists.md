@@ -9,6 +9,8 @@ Each node has:
 
 The first node in the list is referred to as the *head*. Its `prev` points to null (for doubly linked lists) denoting the start of the list. The last node in the list is referred to as the *tail*. Its `next` points to null denoting the end of the list. For circular linked lists, there is no *head* or *tail*, since all nodes point to a next (or previous) node.
 
+Linked lists are among the simplest data structures after arrays. While not efficient for many purposes, they excel in specialized applications like stacks, queues, and deques, since insertions and deletions next to a known element can be done in O(1) time.
+
 ## Linked Lists vs. Arrays
 
 An important aspect of linked lists is how they are differentiated from arrays, another data structure for storing objects sequentially.

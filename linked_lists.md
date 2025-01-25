@@ -47,26 +47,49 @@ Python's built-in [`list`](https://docs.python.org/3/tutorial/datastructures.htm
 
 ## Techniques
 
-**Iterate over a linked list**
-A basic operation requiring traversal from head to tail.
+### Iterate over a linked list
+Starting from head, update the current node to be the next node until the current node is null.
 
-**Reverse a linked list**
-This should be done in-place by adjusting node pointers.
+```python
+curr = head
+while curr:
+    ...
+    curr = curr.next
+```
 
-**Two pointers**
+### Reverse a linked list
+This can be done in-place by adjusting node pointers:
+1. Store the current node's reference to next.
+2. Update the current node's next to be the previous node.
+3. Update the previous node to be the current node.
+4. Update the current node to be the next node (stored in 1).
+
+### Two pointers
 Two pointers are commonly used for finding the middle node, finding the kth node, and cycle detection.
 
-**Find the middle node**
-Using two pointers, `fast` is incremented by 2 and `slow` is incremented by 1. When `fast` reaches the end of the linked list, `slow` is at the middle node.
+### Find the middle node
+Using two pointers, `fast` is advanced by 2 and `slow` is advanced by 1. When `fast` reaches the end of the linked list, `slow` is at the middle node.
 
-**Find the kth node**
-Using two pointers, `p1` is k nodes ahead of `p2`. When incremented together, `p2` is always k nodes behind `p1`.
+### Find the kth node
+Using two pointers, `p1` is k nodes ahead of `p2`. When advanced together, `p2` is always k nodes behind `p1`.
 
-**Cycle detection**
-Using two pointers, `fast` is incremented by 2 and `slow` is incremented by 1. If `fast` and `slow` point to the same node before reaching the end of the linked list, the linked list has a cycle. This is Floyd's cycle-finding algorithm (tortoise and hare algorithm).
+### Cycle detection
+Using two pointers, `fast` is advanced by 2 and `slow` is advanced by 1. If `fast` and `slow` point to the same node before reaching the end of the linked list, the linked list has a cycle. This is Floyd's cycle-finding algorithm (tortoise and hare algorithm).
 
-**Merge two or more sorted linked lists**
-A common operation that involves comparing and linking nodes from multiple sorted lists.
+### Merge two sorted linked lists
+This can be done in-place by adjusting node pointers and using a head sentinel node:
+0. Start by instantiating a head sentinel node.
+1. Compare the heads of the two lists.
+2. Update the current node's next to be the lesser of the two.
+3. Update the head of the list from which the node was taken.
+4. Update the current node in the merged list.
+5. If either of the lists still have nodes, attached to the end of the merged list.
 
-**Sentinel/dummy nodes**
+### Merge k sorted linked lists
+Merging k sorted linked lists can be done in O(nlog k) time complexity and O(k) space complexity using a heap (priority queue).
+1. Build a heap using the head of each list.
+2. For each selection, remove the smallest element from the heap, adding it to the merged list.
+3. Insert the head of the list from which the node was taken into the heap.
+
+### Sentinel/dummy nodes
 Using a sentinel/dummy node at the head/tail of the linked list may help when operations must be performed on the head/tail. This removes the need for performing conditional checks for null pointers.

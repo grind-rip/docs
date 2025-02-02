@@ -1,5 +1,4 @@
 # todo
 
-- [ ] Top K Frequent Elements
-- [ ] Two Heaps
-- [ ] k-way Merge
+- [x] Add 'k-way Merge' to Heaps
+- [ ] Add 'Two Heaps' to Heaps

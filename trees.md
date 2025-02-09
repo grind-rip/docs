@@ -17,9 +17,9 @@ A tree is an undirected, connected, acyclic graph. This means there are no cycle
 * **Internal Node**: Any node in a tree that has child nodes.
 * **External Node**: Any node in a tree that does not have child nodes. Also known as a leaf node.
 * **Neighbor Node**: Two nodes are considered neighbors if they are directly connected to each other by an edge.
-* **Node Depth**: The number of edges on the unique path from the root to the node. A tree with only one node (i.e., both root and leaf) has the depth and height zero.
+* **Node Depth**: The number of edges on the unique path from the root to the node. A tree with only one node (i.e., both root and leaf) has depth and height zero.
 * **Node Height**: The number of edges along the unique path from the node to a leaf. The height of the root is the height of the tree.
-* **Degree**: The degree of a node is the number of its child nodes. The degree of a tree is the maximum degree of all the node in the tree.
+* **Degree**: The degree of a node is the number of its child nodes. The degree of a tree is the maximum degree of all the nodes in the tree.
 * **Distance**: The number of edges along the shortest path between two nodes.
 * **Level**: The level of a node is the number of edges along the unique path between it and the root node. This is the same as depth.
 * **Width**: The maximum number of nodes at any one level in the tree.
@@ -67,7 +67,7 @@ D → E → B → F → G → C → A
 2. Recursively traverse the current node's right subtree.
 3. Visit the current node.
 
-Post-order traversal can be useful to get postfix expression of a binary expression tree.
+Post-order traversal can be useful for obtaining the postfix expression of a binary expression tree.
 
 **In-order**
 

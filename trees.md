@@ -89,3 +89,95 @@ With breadth-first search (sometimes called level-order traversal), each node at
 ```
 A → B → C → D → E → F → G
 ```
+
+## Binary Trees
+
+A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are the most common tree structure.
+
+### Terminology
+
+* **Complete binary tree**: A binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. That is, all internal nodes have two children and all external (leaf) nodes have no children.
+* **Balanced binary tree**: A binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+
+## Binary Search Tree (BST)
+
+A binary search tree (BST) is a binary tree in which the key of each internal node is greater than all the keys in the node's left subtree and less than all the keys in the node's right subtree. A property of a binary search tree is that an in-order traversal will yield all the nodes in ascending order.
+
+## Time Complexity
+
+| Operation | Big O    |
+| --------- | -------- |
+| Access    | O(log n) |
+| Search    | O(log n) |
+| Insert    | O(log n) |
+| Delete    | O(log n) |
+
+**NOTE**: Logarithm time complexity holds only for balanced binary search trees. For an unbalanced BST, operations can degrade to O(n).
+
+## Common Operations
+
+* Enumerating all nodes in the tree.
+* Enumerating all nodes in a subtree of the tree.
+* Searching for a node.
+* Calculating the height of the tree.
+* Adding a new node at a specific position in the tree.
+* Inserting a node.
+* Deleting a node.
+* Pruning (i.e., removing a subtree from the tree).
+* Grafting (i.e., adding a subtree to the tree).
+* Finding the root from a node.
+* Finding the lowest common ancestor of two nodes.
+
+For binary search trees:
+* Validate binary search tree.
+* Get max node.
+* Get min node.
+
+## Techniques
+
+### Recursion
+
+Given the properties of a tree - each child can be treated like the root node of its own subtree - recursion can be used to solve most problems. Pretty much every divide and conquer algorithm for binary trees looks like this:
+
+```python
+def do_something_to_all_nodes(root):
+    """
+    The canonical binary tree algorithm. Processes all nodes using pre-order
+    traversal. Moving the call to `do_something()` between or after the two
+    recursive calls yields an in-order or post-order traversal, respectively.
+    """
+    if root:
+        do_something(root)                     # Process current node
+        do_something_to_all_nodes(root.left)   # Process left subtree
+        do_something_to_all_nodes(root.right)  # Process right subtree
+```
+
+#### Size of a Tree
+
+```python
+def tree_size(root):
+    """
+    Computes the size of a binary tree. Time complexity: O(n)
+    """
+    if not root:
+        return 0
+    return 1 + tree_size(root.left) + tree_size(root.right)
+```
+
+#### Height of a Tree
+
+```python
+def tree_height(root):
+    """
+    Computes the height of a binary tree. Time complexity: O(n)
+    """
+    if not root:
+        return -1
+    lh = tree_height(root.left)
+    rh = tree_height(root.right)
+    return 1 + max(lh, rh)
+```
+
+### Tree Traversal
+
+Tree traversal is a common operation. There are two main tree traversals: depth-first and breadth-first search. Additionally, depth-first search can be done pre-order, post-order, and in-order. Depth-first search can also be implemented iteratively using a stack.

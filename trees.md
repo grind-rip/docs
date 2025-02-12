@@ -133,6 +133,16 @@ For binary search trees:
 * Get max node.
 * Get min node.
 
+## Augmented Trees
+
+An augmented data structure stores additional information in each of its nodes that would otherwise be expensive to compute. For trees, this might include information like the size of a subtree (which can be useful for ranking values, where we want to determine how many elements of the tree are smaller), the height of a subtree, or other summary information like the sum of all the keys in a subtree.
+
+Augmented data structures violate a general programming principle that states the same information should not be stored in different places, since maintaining state is complex and error prone. However, given the benefit gained through augmentation, the complexity cost is justified.
+
+Additionally, since tree operations only modify the nodes on the path from the root to the impacted node and computation can be done in constant time from precomputed values, the total cost of modifying nodes after a tree operation is O(log n) assuming the tree is balanced.
+
+Augmented trees are used in AVL trees, ranking (order statistics), and range queries with O(log n) time complexity.
+
 ## Techniques
 
 ### Recursion
@@ -150,32 +160,6 @@ def do_something_to_all_nodes(root):
         do_something(root)                     # Process current node
         do_something_to_all_nodes(root.left)   # Process left subtree
         do_something_to_all_nodes(root.right)  # Process right subtree
-```
-
-#### Size of a Tree
-
-```python
-def tree_size(root):
-    """
-    Computes the size of a binary tree. Time complexity: O(n)
-    """
-    if not root:
-        return 0
-    return 1 + tree_size(root.left) + tree_size(root.right)
-```
-
-#### Height of a Tree
-
-```python
-def tree_height(root):
-    """
-    Computes the height of a binary tree. Time complexity: O(n)
-    """
-    if not root:
-        return -1
-    lh = tree_height(root.left)
-    rh = tree_height(root.right)
-    return 1 + max(lh, rh)
 ```
 
 ### Tree Traversal

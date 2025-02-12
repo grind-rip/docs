@@ -43,12 +43,12 @@ In the context of algorithm interviews, heaps and priority queues can be treated
 
 ## Time Complexity
 
-| Operation           | Big O     |
-| ------------------- | --------- |
-| Find Max/Min        | O(1)      |
-| Insert              | O(log(n)) |
-| Delete              | O(log(n)) |
-| Heapify<sup>†</sup> | O(n)      |
+| Operation           | Big O    |
+| ------------------- | -------- |
+| Find Max/Min        | O(1)     |
+| Insert              | O(log n) |
+| Delete              | O(log n) |
+| Heapify<sup>†</sup> | O(n)     |
 
 <sup>†</sup>: Creates a heap out of a given array of elements. **NOTE**: A heap is **not** a sorted array, however, the heapsort algorithm can be used to sort an array that satisfies the heap property.
 

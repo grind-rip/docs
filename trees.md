@@ -114,25 +114,6 @@ A binary search tree (BST) is a binary tree in which the key of each internal no
 
 **NOTE**: Logarithm time complexity holds only for balanced binary search trees. For an unbalanced BST, operations can degrade to O(n).
 
-## Common Operations
-
-* Enumerating all nodes in the tree.
-* Enumerating all nodes in a subtree of the tree.
-* Searching for a node.
-* Calculating the height of the tree.
-* Adding a new node at a specific position in the tree.
-* Inserting a node.
-* Deleting a node.
-* Pruning (i.e., removing a subtree from the tree).
-* Grafting (i.e., adding a subtree to the tree).
-* Finding the root from a node.
-* Finding the lowest common ancestor of two nodes.
-
-For binary search trees:
-* Validate binary search tree.
-* Get max node.
-* Get min node.
-
 ## Augmented Trees
 
 An augmented data structure stores additional information in each of its nodes that would otherwise be expensive to compute. For trees, this might include information like the size of a subtree (which can be useful for ranking values, where we want to determine how many elements of the tree are smaller), the height of a subtree, or other summary information like the sum of all the keys in a subtree.
@@ -142,6 +123,10 @@ Augmented data structures violate a general programming principle that states th
 Additionally, since tree operations only modify the nodes on the path from the root to the impacted node and computation can be done in constant time from precomputed values, the total cost of modifying nodes after a tree operation is O(log n) assuming the tree is balanced.
 
 Augmented trees are used in AVL trees, ranking (order statistics), and range queries with O(log n) time complexity.
+
+## Balanced Trees
+
+For binary search trees, the time complexity for finding a node is logarithmic **only** if the tree is balanced. If the tree is highly skewed (i.e., the tree is a linked list), performance degrades to O(n). There are several mechanisms for balancing a tree including tree rotations, treaps, AVL trees, 2-3 trees, 2-3-4 trees (B-trees, red-black trees), splay trees, scapegoat trees, etc...
 
 ## Techniques
 
@@ -165,3 +150,25 @@ def do_something_to_all_nodes(root):
 ### Tree Traversal
 
 Tree traversal is a common operation. There are two main tree traversals: depth-first and breadth-first search. Additionally, depth-first search can be done pre-order, post-order, and in-order. Depth-first search can also be implemented iteratively using a stack.
+
+### Tree Operations
+
+* Enumerating all nodes in the tree.
+* Enumerating all nodes in a subtree of the tree.
+* Searching for a node.
+* Calculating the height of the tree.
+* Adding a new node at a specific position in the tree.
+* Inserting a node.
+* Deleting a node.
+* Pruning (i.e., removing a subtree from the tree).
+* Grafting (i.e., adding a subtree to the tree).
+* Finding the root from a node.
+* Finding the lowest common ancestor of two nodes.
+
+For binary search trees:
+* Validate binary search tree.
+* Get max node.
+* Get min node.
+* Searching for a node.
+* Inserting a node.
+* Deleting a node.

@@ -153,22 +153,16 @@ Tree traversal is a common operation. There are two main tree traversals: depth-
 
 ### Tree Operations
 
-* Enumerating all nodes in the tree.
-* Enumerating all nodes in a subtree of the tree.
-* Searching for a node.
-* Calculating the height of the tree.
-* Adding a new node at a specific position in the tree.
-* Inserting a node.
-* Deleting a node.
-* Pruning (i.e., removing a subtree from the tree).
-* Grafting (i.e., adding a subtree to the tree).
-* Finding the root from a node.
-* Finding the lowest common ancestor of two nodes.
+For binary trees:
+* Enumerate all the nodes in the tree (traversal).
+* Calculate the size of the tree.
+* Calculate the height of the tree.
+* Search for a node.
+* Insert a node.
+* Delete a node.
+* Find the lowest common ancestor of two nodes.
 
 For binary search trees:
-* Validate binary search tree.
-* Get max node.
-* Get min node.
-* Searching for a node.
-* Inserting a node.
-* Deleting a node.
+* Validate the binary search tree.
+* Get the min node.
+* Get the max node.

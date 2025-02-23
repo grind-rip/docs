@@ -4,6 +4,9 @@ A collection of documents
 
 ---
 
+## [Arrays](./arrays.md)
+An array is a block of contiguous memory of fixed size that holds one or more objects of a given type.
+
 ## [Heaps](./heaps.md)
 A heap is a binary tree in which each element has a key (or sometimes priority) that is less than (or greater than) the keys of its children. This property is called the heap property or heap invariant. Heaps can be used to implement priority queues.
 

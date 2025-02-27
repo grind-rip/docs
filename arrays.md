@@ -34,3 +34,15 @@ An important aspect of arrays is how they are differentiated from linked lists, 
 
 **NOTE**: If the array is sorted, searching for an element can be achieved in logarithmic time O(log n) using binary search.
 **NOTE**: Inserting and deleting to/from the end of an array can be done in constant time. For insertions, this requires that the array does not need to be reallocated.
+
+## Techniques
+
+It should be noted that these techniques can also be applied to strings, which are simply arrays of characters (character arrays).
+
+### Sliding Window
+
+The sliding window technique uses two pointers which maintain a "window" of elements that moves through an array or string in a specific way. The window can grow or shrink depending on certain conditions, but the pointers do not cross. This ensures that each value in the array is only accessed at most twice and the time complexity is still O(n). This is referred to as amortized analysis. The sliding window approach is particularly useful when you need to find a subarray or substring that meets certain criteria.
+
+>Koan: Whenever you see a problem that involves finding a contiguous subarray or substring (size or the subarray/substring itself) always consider using sliding window.
+
+**NOTE**: You should get **really** good at these types of problems.

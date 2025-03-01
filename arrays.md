@@ -46,3 +46,7 @@ The sliding window technique uses two pointers which maintain a "window" of elem
 >Koan: Whenever you see a problem that involves finding a contiguous subarray or substring (size or the subarray/substring itself) always consider using sliding window.
 
 **NOTE**: You should get **really** good at these types of problems.
+
+### Two Pointers
+
+The two pointers technique typically uses two pointers that move independently through the array/string, often starting from different positions (like beginning and end). This is commonly used when you need to find two elements that satisfy certain conditions. Additionally, when you are given two arrays to process, it is common to have one pointer per array, incrementing each when necessary (e.g., merging two sorted arrays).

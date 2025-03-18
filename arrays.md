@@ -50,3 +50,7 @@ The sliding window technique uses two pointers which maintain a "window" of elem
 ### Two Pointers
 
 The two pointers technique typically uses two pointers that move independently through the array/string, often starting from different positions (like beginning and end). This is commonly used when you need to find two elements that satisfy certain conditions. Additionally, when you are given two arrays to process, it is common to have one pointer per array, incrementing each when necessary (e.g., merging two sorted arrays).
+
+### Traversing from the Right
+
+Sometimes you can traverse the array starting from the right instead of the conventional approach of from the left. These problems typically will use a monotonic stack, which is used to find the next smaller/greater element.

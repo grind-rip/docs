@@ -54,3 +54,7 @@ The two pointers technique typically uses two pointers that move independently t
 ### Traversing from the Right
 
 Sometimes you can traverse the array starting from the right instead of the conventional approach of from the left. These problems typically will use a monotonic stack, which is used to find the next smaller/greater element.
+
+### Sorting the Array
+
+If the array is sorted, use binary search. Binary search runs in logarithmic time in the worst case, making O(log n) comparisons, where n is the number of elements in the array. If the array is already sorted, the solution will most likely be faster than O(n). Sometimes sorting the array may significantly simplify the problem, however, this will result in a time complexity of at best O(nlog n).

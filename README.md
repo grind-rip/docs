@@ -13,6 +13,9 @@ A heap is a binary tree in which each element has a key (or sometimes priority) 
 ## [Linked Lists](./linked_lists.md)
 A linked list is a data structure where elements (often called nodes) are connected in a sequence, with each node containing both data and a reference (or "pointer") to the next node in the sequence.
 
+## [Intervals](./intervals.md)
+Intervals, or array intervals, refer to a contiguous sequence of elements from an array, starting at one index and ending at another ([start, end]).
+
 ## [Strings](./strings.md)
 A string is a data type in programming that represents a sequence of characters.
 

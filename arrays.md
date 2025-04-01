@@ -59,4 +59,4 @@ Sometimes you can traverse the array starting from the right instead of the conv
 
 If the array is sorted, use binary search. Binary search runs in logarithmic time in the worst case, making O(log n) comparisons, where n is the number of elements in the array. If the array is already sorted, the solution will most likely be faster than O(n). Sometimes sorting the array may significantly simplify the problem, however, this will result in a time complexity of at best O(nlog n). Sorting the array first is a crucial first step in interval merging problems.
 
->Koan: A common routine for interval questions is to sort the array of intervals by each interval's starting index.
+>Koan: A common routine for interval problems is to sort the array of intervals by each interval's starting index.

@@ -51,11 +51,11 @@ The sliding window technique uses two pointers which maintain a "window" of elem
 
 The two pointers technique typically uses two pointers that move independently through the array/string, often starting from different positions (like beginning and end). This is commonly used when you need to find two elements that satisfy certain conditions. Additionally, when you are given two arrays to process, it is common to have one pointer per array, incrementing each when necessary (e.g., merging two sorted arrays).
 
-### Traversing from the Right
+### Traverse from the Right
 
 Sometimes you can traverse the array starting from the right instead of the conventional approach of from the left. These problems typically will use a monotonic stack, which is used to find the next smaller/greater element.
 
-### Sorting the Array
+### Sort the Array
 
 If the array is sorted, use binary search. Binary search runs in logarithmic time in the worst case, making O(log n) comparisons, where n is the number of elements in the array. If the array is already sorted, the solution will most likely be faster than O(n). Sometimes sorting the array may significantly simplify the problem, however, this will result in a time complexity of at best O(nlog n). Sorting the array first is a crucial first step in interval merging problems.
 

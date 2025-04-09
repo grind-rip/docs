@@ -47,6 +47,13 @@ def overlap(a: tuple[int, int], b: tuple[int, int]) -> bool:
     return a[0] < b[1] and b[0] < a[1]
 ```
 
+**NOTE**: Clarify whether, for example, [1, 2] and [2, 3] are considered overlapping intervals, as it affects the equality checks.
+
+```python
+def overlap(a: tuple[int, int], b: tuple[int, int]) -> bool:
+    return a[0] <= b[1] and b[0] <= a[1]
+```
+
 ### Merge Two Intervals
 
 In order to merge two intervals, `a` and `b`, the starting index of the merge interval is the smaller of the two starting indices of `a` and `b` and the ending index of the merge interval is the larger of the two ending indices of `a` and `b`.
